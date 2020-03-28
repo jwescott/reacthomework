@@ -15,20 +15,23 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function NestedGrid() {
+export default function NestedGrid(props) {
   const classes = useStyles();
 
+  console.log(props.basketball)
   function FormRow() {
+
+  
     return (
       <React.Fragment>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}><Card/></Paper>
+              <Grid item xs={12}>
+          <Paper className={classes.paper}> <Card basketball={props.basketball} index="0" /></Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}><Card/></Paper>
+          <Paper className={classes.paper}><Card basketball={props.basketball} index="1" /></Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}><Card/></Paper>
+          <Paper className={classes.paper}><Card basketball={props.basketball} index="2" /></Paper>
         </Grid>
       </React.Fragment>
     );

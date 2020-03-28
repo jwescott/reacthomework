@@ -14,9 +14,9 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ImgMediaCard() {
+export default function ImgMediaCard(props) {
   const classes = useStyles();
-
+   console.log(props.basketball, props.index)
   return (
     <Card className={classes.root}>
       <CardActionArea>
@@ -24,7 +24,7 @@ export default function ImgMediaCard() {
           component="img"
           alt="Contemplative Reptile"
           height="140"
-          image="https://fanatics.frgimages.com/FFImage/thumb.aspx?i=/productimages/_2924000/altimages/ff_2924766alt5_full.jpg&w=900"
+          image={props.basketball [props.index].image}
           title="Contemplative Reptile"
         />
         <CardContent>
